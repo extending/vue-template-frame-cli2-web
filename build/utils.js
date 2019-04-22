@@ -128,14 +128,19 @@ exports.entries = function () {
 // 与上面的多页面入口配置相同，读取pages文件夹下的对应的html后缀文件，然后放入数组中
 exports.htmlPlugin = function () {
     let entryHtml = glob.sync(PAGE_PATH + '/*/*.html')
-    let arr = []
-    entryHtml.forEach((filePath) => {
+    let arr = [];
+    let exchangeEntryHtml = [];
+    exchangeEntryHtml[0] = entryHtml[0];
+    exchangeEntryHtml[1] = entryHtml[2];
+    exchangeEntryHtml[2] = entryHtml[1];
+    exchangeEntryHtml.forEach((filePath) => {
         let filename = filePath.substring(filePath.lastIndexOf('\/') + 1, filePath.lastIndexOf('.'))
         let conf = {
             // 模板来源
             template: filePath,
             // 文件名称
-            filename: filename + '.html',
+            // filename: filename + '.html', //多页面配置启用
+            filename: 'index' + '.html', // 自由切换入口页面启用
             // 页面模板需要加对应的js脚本，如果不加这行则每个页面都会引入所有的js脚本
             chunks: ['manifest', 'vendor', filename],
             inject: true
@@ -152,6 +157,7 @@ exports.htmlPlugin = function () {
         }
         arr.push(new HtmlWebpackPlugin(conf))
     })
+    console.log(arr)
     return arr
 }
 /* 这里是添加的部分 ---------------------------- 结束 */
