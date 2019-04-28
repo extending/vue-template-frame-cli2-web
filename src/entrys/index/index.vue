@@ -6,7 +6,17 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  data() {
+    return {}
+  },
+  created() {
+    // this.axios.interceptors.request.use(config => {
+
+    // }, error => {
+
+    // })
+  }
 }
 </script>
 

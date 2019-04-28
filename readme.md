@@ -2,6 +2,13 @@
 
 > vue-cli template frame for web
 
+## 功能介绍
+
+> 该项目使用 vue cli 2.x 搭建，运用 mockjs + json-server 模拟 ajax 请求生成随机数据。
+>
+> 可构建为多页面功能
+>
+
 ## Build Setup
 
 ``` bash
@@ -19,3 +26,8 @@ npm run build --report
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+### 技术栈
+- **vue cli 2**
+- **vue-router**
+- **mock + json-server**
