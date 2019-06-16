@@ -30,4 +30,11 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 ### 技术栈
 - **vue cli 2**
 - **vue-router**
+- **构建多页面**
 - **mock + json-server**
+- **maven editor**
+- **echarts**
+- **富文本编辑器 vue-quill-editor**
+
+### TODO
+- vuex

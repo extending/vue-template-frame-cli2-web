@@ -35,10 +35,10 @@ module.exports = {
 
     cssSourceMap: true,
     proxyTable: {
-      // '/email': {
-      //   target: "http://localhost:8080",
-			// 	changeOrigin: true
-      // }
+      '/users': {
+        target: "http://localhost:3000",
+				changeOrigin: true
+      }
     }
   },
 
