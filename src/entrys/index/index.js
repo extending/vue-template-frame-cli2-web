@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './index.vue'
 import router from '@/pages/index/router'
+import store from '@/pages/index/store'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import Element from 'element-ui'
@@ -21,6 +22,7 @@ import('@/mock')
 new Vue({
   el: '#app',
   router,
+  store,
   template: '<App/>',
   components: { App }
 })

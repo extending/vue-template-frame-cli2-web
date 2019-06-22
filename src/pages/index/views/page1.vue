@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h2>page1</h2>
     <a id="downlink"></a>
     <el-button class="button" @click="downloadFile(stringData)">导出</el-button>
   </div>

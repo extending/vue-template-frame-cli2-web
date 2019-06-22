@@ -1,5 +1,5 @@
 export default {
-  path: '/',
+  path: 'page1',
   name: 'page1',
   component: () => import("./page1"),
   meta: {
