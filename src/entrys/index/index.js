@@ -7,8 +7,11 @@ import store from '@/pages/index/store'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import Element from 'element-ui'
+import Antd from 'ant-design-vue'
+import 'ant-design-vue/dist/antd.css'
 
 Vue.use(Element)
+Vue.use(Antd)
 Vue.use(VueAxios, axios)
 
 Vue.config.productionTip = false

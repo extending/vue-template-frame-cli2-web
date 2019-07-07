@@ -25,9 +25,11 @@ export default {
         return response;
       }else if (response.data.status == -2) {
         this.$store.commit('user', false);
+        this.$message.error(response.data.msg);
         return Promise.reject(error);
       }
     }, error => {
+      this.$message.error(error.message);
       return Promise.reject(error);
     })
   }

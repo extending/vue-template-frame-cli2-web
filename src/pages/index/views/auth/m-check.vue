@@ -21,10 +21,10 @@ export default {
 
   methods: {
     check() {
-      let url = "/api/getSessionFail";
-      let params = {name: 89, year: 65};
-      this.axios.get(url, params).then(res => {
-
+      let urlSessionFail = "/api/getSessionFail";
+      let urlSessionSuccess = "/api/getSessionSuccess";
+      this.axios.get(urlSessionFail).then(res => {
+        this.$store.commit("user", res.data.userName);
       }).catch(error => {
         this.errorMsg = error.message;
         this.loadFail = true;

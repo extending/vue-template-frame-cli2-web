@@ -1,5 +1,6 @@
 <template lang='pug'>
-  div workbench
+.workbench
+  a-button workbench
 </template>
 
 <script>
