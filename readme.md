@@ -30,6 +30,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 ### 技术栈
 - **vue cli 2**
 - **vue-router**
+- **vuex**
 - **构建多页面**
 - **mock + json-server**
 - **maven editor**
@@ -37,5 +38,4 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 - **富文本编辑器 vue-quill-editor**
 
 ### TODO
-- vuex
 - antd
