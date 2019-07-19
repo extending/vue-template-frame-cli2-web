@@ -7,8 +7,10 @@ import store from '@/pages/index/store'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import Element from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css';
 import Antd from 'ant-design-vue'
 import 'ant-design-vue/dist/antd.css'
+import '@/utils/mammoth.browser.min'
 
 Vue.use(Element)
 Vue.use(Antd)
@@ -17,8 +19,8 @@ Vue.use(VueAxios, axios)
 Vue.config.productionTip = false
 
 if (process.env.NODE_ENV !== 'production') {
+  import('@/mock')
 }
-import('@/mock')
 
 
 /* eslint-disable no-new */

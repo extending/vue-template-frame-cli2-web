@@ -36,6 +36,9 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 - **maven editor**
 - **echarts**
 - **富文本编辑器 vue-quill-editor**
+- antd
+- mammoth docx to html converter
 
 ### TODO
-- antd
+- font-awesome
+- spectre: css responsive

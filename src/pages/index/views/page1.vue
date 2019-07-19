@@ -1,14 +1,23 @@
-<template>
-  <div>
-    <h2>page1</h2>
-    <a id="downlink"></a>
-    <el-button class="button" @click="downloadFile(stringData)">导出</el-button>
+<template lang="pug">
+  div
+    h1 page1
+    a(id="downlink")
+    el-button.button(@click="downloadFile(stringData)") 导出 EXCEL
+    p
+      el-upload(:file-list="fileList", action="/" name="file" :auto-upload="false" :on-change="handleFile" ref="upload")
+        el-button(type="primary" size="small") 点击上传
+        el-button(type="success" size="small" style="margin-left: 10px;" disabled) 上传到服务器
+        div.el-upload__tip(slot="tip") 导入 docx 文档，可被转换为 HTML 显示在下方
+    p
+    div(v-html="htmlString")
+    div {{messages}}
   </div>
 </template>
 
 <script>
-  // 引入xlsx
-  var XLSX = require('xlsx')
+// 引入xlsx
+var XLSX = require('xlsx');
+
   export default {
     name: 'page1',
     data () {
@@ -19,11 +28,10 @@
           {name: 'xh', age: '23'},
           {name: 'xz', age: '24'},
         ],
+        htmlString: null,
+        messages: null,
+        fileList: []
       }
-    },
-    mounted () {
-      this.outFile = document.getElementById('downlink')
-      this.load();
     },
     methods: {
       downloadFile: function (rs) { // 点击导出按钮
@@ -96,16 +104,30 @@
         }
         return s
       },
-      load() {
-        let params = {id: 2};
-        let {id} = params;
-        this.axios.post(`/users/getUserInfo`, params).then(res => {
-          console.log(res)
-        }).catch(error => {
-          console.log(error);
+      handleFile(file, fileList) {
+        this.readFileInputEventAsArrayBuffer(file.raw, arrayBuffer => {
+          mammoth.convertToHtml({arrayBuffer: arrayBuffer})
+              .then(result => {
+                    this.htmlString = result.value; // The generated HTML
+                    this.messages = result.messages; // Any messages, such as warnings during conversion
+              })
+              .done();
         })
+      },
+      readFileInputEventAsArrayBuffer(rawFile, cb) {
+        // 将文档转换为 二进制数据缓冲区
+        console.log(rawFile)
+        let reader = new FileReader();
+        reader.onload = function(loadEvent) {
+            let arrayBuffer = loadEvent.target.result;
+            cb(arrayBuffer);
+        };
+        reader.readAsArrayBuffer(rawFile);
       }
-    }
+    },
+    mounted () {
+      this.outFile = document.getElementById('downlink');
+    },
   }
 </script>
 
