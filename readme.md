@@ -41,4 +41,5 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 ### TODO
 - font-awesome
+- d3 or threejs
 - spectre: css responsive
