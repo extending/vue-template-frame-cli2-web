@@ -12,6 +12,11 @@ import Antd from 'ant-design-vue'
 import 'ant-design-vue/dist/antd.css'
 import '@/utils/mammoth.browser.min'
 import '@/utils/rem'
+import * as filters from '@/utils/filter'
+
+for(let item of Object.keys(filters)) {
+  Vue.filter(item, filters[item]);
+}
 
 Vue.use(Element)
 Vue.use(Antd)
@@ -22,7 +27,6 @@ Vue.config.productionTip = false
 if (process.env.NODE_ENV !== 'production') {
   import('@/mock')
 }
-
 
 /* eslint-disable no-new */
 new Vue({

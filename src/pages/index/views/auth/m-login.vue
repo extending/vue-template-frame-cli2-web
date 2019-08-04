@@ -21,6 +21,12 @@
         el-form-item
           el-button(type="primary" size="small" @click="login") 登录
       el-row
+        el-form-item(label="输入金额")
+          el-input(v-model="eleForm.amount")
+      el-row
+        el-form-item(label="过滤金额")
+          span {{eleForm.amount | toThousandFilter}}
+      el-row
         img(:src="demoImg" alt="responsible")
 </template>
 
@@ -38,7 +44,8 @@ export default {
       form: this.$form.createForm(this),
       eleForm: {
         userName: '',
-        password: ''
+        password: '',
+        amount: '',
       },
       // antd 使用
       formItemLayout: {
