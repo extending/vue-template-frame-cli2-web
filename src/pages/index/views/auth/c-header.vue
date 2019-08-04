@@ -5,7 +5,8 @@
       el-dropdown(trigger="click")
         i.el-icon-setting.el-dropdown-link
         el-dropdown-menu(slot="dropdown")
-          el-dropdown-item 退出
+          router-link(:to="{name: 'logout'}")
+            el-dropdown-item 退出
 </template>
 
 <script>

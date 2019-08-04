@@ -46,4 +46,7 @@ export default {
 * {
   box-sizing: border-box;
 }
+a {
+  color: #1409bc;
+}
 </style>
