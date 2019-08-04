@@ -1,9 +1,13 @@
 <template lang='pug'>
 .workbench
-  a-button workbench
+  c-header
 </template>
 
 <script>
+import CHeader from './c-header'
+import CSidebar from './c-sidebar'
+import CFooter from './c-footer'
+
 export default {
   name: 'm-workbench',
   data () {
@@ -11,7 +15,7 @@ export default {
     };
   },
 
-  components: {},
+  components: {CHeader, CSidebar, CFooter},
 
   computed: {},
 

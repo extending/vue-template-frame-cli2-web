@@ -11,6 +11,7 @@ import 'element-ui/lib/theme-chalk/index.css';
 import Antd from 'ant-design-vue'
 import 'ant-design-vue/dist/antd.css'
 import '@/utils/mammoth.browser.min'
+import '@/utils/rem'
 
 Vue.use(Element)
 Vue.use(Antd)
