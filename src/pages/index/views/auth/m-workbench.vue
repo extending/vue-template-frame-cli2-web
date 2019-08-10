@@ -3,7 +3,7 @@
   c-sidebar.sidebar
   .content
     c-header
-    router-view
+    router-view.view
 </template>
 
 <script>
@@ -36,7 +36,10 @@ export default {
   }
   .content {
     height: 100%;
-    overflow: auto
+    overflow: auto;
+    .view {
+      margin-top: 36px;
+    }
   }
 }
 </style>

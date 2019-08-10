@@ -27,6 +27,7 @@ export default {
 .header {
   position: fixed;
   top: 0;
+  width: 85%;
   height: 36px;
   overflow: hidden;
   padding: 0 20px;
