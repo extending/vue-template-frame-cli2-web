@@ -38,6 +38,7 @@ export default {
 
 <style>
 #app {
+  height: 100%;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -46,7 +47,7 @@ export default {
 * {
   box-sizing: border-box;
 }
-a {
-  color: #1409bc;
+a, a:hover {
+  color: #ffffff;
 }
 </style>

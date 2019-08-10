@@ -25,6 +25,8 @@ export default {
 </script>
 <style lang='scss' scoped>
 .header {
+  position: fixed;
+  top: 0;
   height: 36px;
   overflow: hidden;
   padding: 0 20px;

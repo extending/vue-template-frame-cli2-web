@@ -1,5 +1,5 @@
 <template lang="pug">
-  div
+  .page1
     h1 page1
     a(id="downlink")
     el-button.button(@click="downloadFile(stringData)") 导出 EXCEL
@@ -132,11 +132,14 @@ var XLSX = require('xlsx');
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
+<style lang="scss" scoped>
+.page1 {
+  text-align: center;
   .el-table th>.cell {
     text-align: center;
   }
   .button {
     margin-bottom: 20px;
   }
+}
 </style>

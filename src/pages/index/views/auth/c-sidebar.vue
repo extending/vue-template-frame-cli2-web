@@ -1,5 +1,6 @@
 <template lang='pug'>
-  .sidebar sidebar
+  div
+    router-link(:to="{name: 'demo-1'}") demo-1
 </template>
 
 <script>
