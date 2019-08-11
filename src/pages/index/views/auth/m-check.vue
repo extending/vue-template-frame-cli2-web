@@ -24,7 +24,10 @@ export default {
       let urlSessionFail = "/api/getSessionFail";
       let urlSessionSuccess = "/api/getSessionSuccess";
       this.axios.get(urlSessionFail).then(res => {
-        this.$store.commit("user", res.data.userName);
+        this.$store.commit({
+          type: 'user',
+          user: res.data.userName
+        });
       }).catch(error => {
         this.errorMsg = error.message;
         this.loadFail = true;
@@ -45,6 +48,8 @@ export default {
 </script>
 <style lang='scss' scoped>
 .check {
+  text-align: center;
+  padding: 30px 0;
   .try {
     color: blue;
     cursor: pointer;

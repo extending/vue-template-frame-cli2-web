@@ -24,7 +24,10 @@ export default {
       if (response.data.status == 0) {
         return response;
       }else if (response.data.status == -2) {
-        this.$store.commit('user', false);
+        this.$store.commit({
+          type: 'user',
+          user: false
+        });
         this.$message.error(response.data.msg);
         return Promise.reject(error);
       }
@@ -46,8 +49,5 @@ export default {
 }
 * {
   box-sizing: border-box;
-}
-a, a:hover {
-  color: #ffffff;
 }
 </style>

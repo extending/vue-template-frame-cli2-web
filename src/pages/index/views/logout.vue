@@ -15,8 +15,16 @@
       return {}
     },
     methods: {
+      logout() {
+        this.$message.success('退出成功');
+        this.$store.commit({
+          type: 'user',
+          user: false
+        });
+      }
     },
     mounted () {
+      this.logout();
     },
   }
 </script>

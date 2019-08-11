@@ -22,8 +22,9 @@ export default new Vuex.Store({
     }
   },
   mutations: {
-    user(state,user) {
-      state.user = user
+    user(state, payload) {
+      state.user = payload.user;
+      payload.newStateAttr && Vue.set(state, 'newStateAttr', payload.newStateAttr);
     }
   },
   actions: {

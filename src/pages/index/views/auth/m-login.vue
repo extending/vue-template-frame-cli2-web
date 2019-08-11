@@ -26,7 +26,7 @@
       el-row
         el-form-item(label="过滤金额")
           span {{eleForm.amount | toThousandFilter}}
-      el-row
+      //el-row
         img(:src="demoImg" alt="responsible")
 </template>
 
@@ -110,7 +110,11 @@ export default {
         let {userName, password} = this.eleForm;
         let data = {userName, password};
         this.axios.get(url, data).then(res => {
-          this.$store.commit('user', res.data.userName);
+          this.$store.commit({
+            type: 'user',
+            user: res.data.userName,
+            newStateAttr: 'this is a set state attr'
+          });
         }).catch(error => {
           this.$message.error(error.message);
         })
