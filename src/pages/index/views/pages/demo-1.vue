@@ -1,14 +1,40 @@
 <template lang='pug'>
-  .demo 示例一
+  .demo
+   h1 示例一
+   el-button(size="mini" type="primary" @click="user") 手动退出
+   el-form(ref="form" :model="form" inline label-width="140px")
+    el-row
+      el-form-item(label="金额转为千分位：")
+        el-input(v-model="form.amount" size="small")
+      el-form-item {{form.amount | toThousandFilter}}
+    el-row
+      el-form-item(label="平分数组：")
+        span {{form.arr}}
+      el-form-item {{form.arr | splitArray(3)}}
 </template>
 
 <script>
-import {mapState, mapGetters} from 'vuex'
+import {mapState, mapGetters, mapMutations} from 'vuex'
 
 export default {
   name: 'demo-1',
   data() {
       return {
+        form: {
+          amount: '',
+          arr: [
+            {name: 'xm0', age: 30},
+            {name: 'xm1', age: 31},
+            {name: 'xm2', age: 32},
+            {name: 'xm3', age: 33},
+            {name: 'xm4', age: 34},
+            {name: 'xm5', age: 35},
+            {name: 'xm6', age: 36},
+            {name: 'xm7', age: 37},
+            {name: 'xm8', age: 38},
+            {name: 'xm9', age: 39},
+          ]
+        }
       }
   },
   computed: {
@@ -30,7 +56,14 @@ export default {
     ])
   },
   components: {},
-  methods: {},
+  methods: {
+    ...mapMutations([
+      'user'
+    ]),
+    manualLogout() {
+      this.user({user: null, newStateAttr: 'commit mapmutations'});
+    }
+  },
   mounted() {},
 }
 
@@ -38,7 +71,9 @@ export default {
 <style lang='scss' scoped>
 .demo {
   height: 2000px;
-  text-align: center;
   font-size: 18px;
+  h1 {
+  text-align: center;
+  }
 }
 </style>
