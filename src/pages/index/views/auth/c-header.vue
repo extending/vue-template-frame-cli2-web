@@ -34,6 +34,7 @@ export default {
   line-height: 36px;
   background: rgb(82, 123, 212);
   color: #fff;
+  z-index: 999;
   .login-info {
     float: left;
   }

@@ -1,7 +1,7 @@
 <template lang='pug'>
   .demo
    h1 示例一
-   el-button(size="mini" type="primary" @click="user") 手动退出
+   el-button(size="mini" type="primary" @click="manualLogout") 手动退出
    el-form(ref="form" :model="form" inline label-width="140px")
     el-row
       el-form-item(label="金额转为千分位：")
@@ -45,12 +45,12 @@ export default {
     testIncreaseCount1() {
       return this.$store.getters.increaseCount1(90);
     },
-    ...mapState({
-      user (state) {
-        // 此处必须使用常规函数才能使用 `this` 获取局部状态，不能使用箭头函数
-        return this.label + state.user
-      },
-    }),
+    // ...mapState({
+    //   user (state) {
+    //     // 此处必须使用常规函数才能使用 `this` 获取局部状态，不能使用箭头函数
+    //     return this.label + state.user
+    //   }
+    // }),
     ...mapGetters([
       'totalCount'
     ])
@@ -61,6 +61,7 @@ export default {
       'user'
     ]),
     manualLogout() {
+      // 使用辅助函数 mapMutation 映射为组件中的 methods
       this.user({user: null, newStateAttr: 'commit mapmutations'});
     }
   },

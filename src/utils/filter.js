@@ -13,6 +13,6 @@ export function splitArray(arr,num) {
   for(let i = 0;i<arr.length;i+=perArrLength) {
     result.push(arr.slice(i,i+perArrLength));
   }
-  console.log(arr, num, result.length)
+  // console.log(arr, num, result.length)
   return result;
 }
