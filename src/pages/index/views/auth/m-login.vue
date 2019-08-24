@@ -81,6 +81,14 @@ export default {
   },
   components: {},
   computed: {},
+  watch: {
+    'eleForm.userName': (val) => {
+      console.log(val, this.formLayout, 'watch 里箭头函数绑定的是父组件的 this')
+    },
+    'eleForm.password'(val) {
+      console.log(val, this.formLayout)
+    },
+  },
   methods: {
     handleSubmit  (e) {
       e.preventDefault();

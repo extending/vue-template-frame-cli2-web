@@ -11,13 +11,22 @@
       el-form-item(label="平分数组：")
         span {{form.arr}}
       el-form-item {{form.arr | splitArray(3)}}
+    el-row
+      h2 组件通信 父组件 demo-1，子组件c-a，孙组件c-b
+      h3 组件 demo-1：$attrs：A-C
+      c-a(:message-a="form.messageA", :messageB="form.messageB")
+      c-c
+
 </template>
 
 <script>
 import {mapState, mapGetters, mapMutations} from 'vuex'
+import CA from './demos/c-a'
+import CC from './demos/c-c'
 
 export default {
   name: 'demo-1',
+  components: {CA, CC},
   data() {
       return {
         form: {
@@ -33,9 +42,17 @@ export default {
             {name: 'xm7', age: 37},
             {name: 'xm8', age: 38},
             {name: 'xm9', age: 39},
-          ]
-        }
+          ],
+          messageA: 'this is from demo-1 message-a',
+          messageB: 'this is from demo-1 message-b',
+        },
+        testProvide1: 'testprovide1',
+        testProvide2: 'testprovide2',
       }
+  },
+  provide: {
+    provide1: this.testProvide1 || 999999,
+    provide2: this.testProvide2 || this,
   },
   computed: {
     label() {
@@ -55,7 +72,6 @@ export default {
       'totalCount'
     ])
   },
-  components: {},
   methods: {
     ...mapMutations([
       'user'
@@ -73,8 +89,9 @@ export default {
 .demo {
   height: 2000px;
   font-size: 18px;
+  padding: 0 30px;
   h1 {
-  text-align: center;
+    text-align: center;
   }
 }
 </style>

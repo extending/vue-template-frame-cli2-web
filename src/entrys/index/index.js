@@ -14,6 +14,9 @@ import '@/utils/mammoth.browser.min'
 import '@/utils/rem'
 import * as filters from '@/utils/filter'
 
+// 全局事件总线
+Vue.prototype.$EventBus = new Vue();
+
 for(let item of Object.keys(filters)) {
   Vue.filter(item, filters[item]);
 }
