@@ -16,6 +16,7 @@
       h3 组件 demo-1：$attrs：A-C
       c-a(:message-a="form.messageA", :messageB="form.messageB")
       c-c
+      router-view
 
 </template>
 
