@@ -63,12 +63,12 @@ export default {
     testIncreaseCount1 () {
       return this.$store.getters.increaseCount1(90);
     },
-    // ...mapState({
-    //   user (state) {
-    //     // 此处必须使用常规函数才能使用 `this` 获取局部状态，不能使用箭头函数
-    //     return this.label + state.user
-    //   }
-    // }),
+    ...mapState({
+      xuser (state) {
+        // 此处必须使用常规函数才能使用 `this` 获取局部状态，不能使用箭头函数
+        return this.label + state.user
+      }
+    }),
     ...mapGetters([
       'totalCount'
     ])

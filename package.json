@@ -8,9 +8,10 @@
     "mock": "json-server --watch ./src/mock/index.js --routes ./src/mock/routes.json -p 3000",
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "concurrently \"npm run mock\" \"npm run dev\"",
+    "start2": "npm run mock & npm run dev",
     "lint": "eslint --ext .js,.vue src/pages",
     "lint:fix": "eslint --ext .js,.vue --fix src/pages",
-    "build": "node build/build.js"
+    "build": "npm run lint:fix && node build/build.js"
   },
   "dependencies": {
     "ant-design-vue": "^1.3.10",
