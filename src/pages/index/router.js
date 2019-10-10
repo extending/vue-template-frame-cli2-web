@@ -5,9 +5,9 @@ import root from './views/root.route'
 Vue.use(Router)
 
 export default new Router({
-	mode: 'history',
-	base: process.env.BASE_URL,
-	routes: [
-		root,
-	]
+  mode: 'history',
+  base: process.env.BASE_URL,
+  routes: [
+    root
+  ]
 })

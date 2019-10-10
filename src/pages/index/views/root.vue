@@ -5,10 +5,10 @@
 
 <script>
 export default {
-    name: 'root',
-    data() {
-        return {}
-    }
+  name: 'root',
+  data () {
+    return {}
+  }
 }
 </script>
 

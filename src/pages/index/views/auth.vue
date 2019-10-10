@@ -19,12 +19,12 @@ export default {
   components: {
     MCheck,
     MWorkbench,
-    MLogin,
+    MLogin
   },
 
   computed: {},
 
-  mounted() {
+  mounted () {
 
   },
 

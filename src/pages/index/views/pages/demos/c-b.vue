@@ -14,7 +14,7 @@ export default {
   props: {
     messageB: {
       type: String,
-      default: ""
+      default: ''
     }
   },
   data () {
@@ -26,13 +26,13 @@ export default {
   components: {},
   computed: {},
   methods: {
-    testBus(val) {
+    testBus (val) {
       console.log(val)
       this.$EventBus.$emit('globalEvent', val)
     }
   },
-  mounted() {
-  },
+  mounted () {
+  }
 }
 
 </script>

@@ -6,10 +6,10 @@
 
 <script>
 export default {
-    name: 'not-found',
-    data() {
-        return {}
-    }
+  name: 'not-found',
+  data () {
+    return {}
+  }
 }
 </script>
 

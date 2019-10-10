@@ -5,14 +5,14 @@
 <script>
 export default {
   name: 'demo-4',
-  data() {
-      return {
-      }
+  data () {
+    return {
+    }
   },
   components: {},
   computed: {},
   methods: {},
-  mounted() {},
+  mounted () {}
 }
 
 </script>

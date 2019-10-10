@@ -8,6 +8,8 @@
     "mock": "json-server --watch ./src/mock/index.js --routes ./src/mock/routes.json -p 3000",
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "concurrently \"npm run mock\" \"npm run dev\"",
+    "lint": "eslint --ext .js,.vue src/pages",
+    "lint:fix": "eslint --ext .js,.vue --fix src/pages",
     "build": "node build/build.js"
   },
   "dependencies": {
@@ -26,6 +28,7 @@
   "devDependencies": {
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
+    "babel-eslint": "^8.2.6",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
     "babel-loader": "^7.1.1",
     "babel-plugin-syntax-jsx": "^6.18.0",
@@ -37,6 +40,13 @@
     "concurrently": "^4.1.0",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.0",
+    "eslint": "^6.5.1",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-vue": "^5.2.3",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^1.1.4",
     "friendly-errors-webpack-plugin": "^1.6.1",

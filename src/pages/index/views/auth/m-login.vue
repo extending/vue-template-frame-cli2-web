@@ -26,9 +26,9 @@
 
 <script>
 const rules = {
-  notNull: {required: true, message: '此项为必填项！', trigger: 'blur'},
+  notNull: { required: true, message: '此项为必填项！', trigger: 'blur' }
 }
-const demoImg = require("@/assets/logo.png");
+const demoImg = require('@/assets/logo.png');
 
 export default {
   name: 'm-login',
@@ -38,12 +38,12 @@ export default {
       form: this.$form.createForm(this),
       eleForm: {
         userName: '',
-        password: '',
+        password: ''
       },
       // antd 使用
       formItemLayout: {
         labelCol: {
-          span: 4,
+          span: 4
           // xs: { span: 24 },
           // sm: { span: 18 },
           // md: { span: 12 },
@@ -53,8 +53,8 @@ export default {
           xs: { span: 24 },
           sm: { span: 18 },
           md: { span: 12 },
-          lg: { span: 6 },
-        },
+          lg: { span: 6 }
+        }
         // colon: true,
         // required: true,
       },
@@ -62,19 +62,19 @@ export default {
       rules: {
         userName: {
           rules: [
-            {required: true, message: 'Please input your userName!', trigger: 'blur'}
+            { required: true, message: 'Please input your userName!', trigger: 'blur' }
           ]
         },
         password: {
           rules: [
-            {required: true, message: 'Please input your password!', trigger: 'blur'}
+            { required: true, message: 'Please input your password!', trigger: 'blur' }
           ]
         }
       },
       // element-ui 使用
       eleRules: {
         userName: [rules.notNull],
-        password: [rules.notNull],
+        password: [rules.notNull]
       },
       demoImg: demoImg
     };
@@ -85,9 +85,9 @@ export default {
     'eleForm.userName': (val) => {
       console.log(val, this.formLayout, 'watch 里箭头函数绑定的是父组件的 this')
     },
-    'eleForm.password'(val) {
+    'eleForm.password' (val) {
       console.log(val, this.formLayout)
-    },
+    }
   },
   methods: {
     handleSubmit  (e) {
@@ -99,17 +99,17 @@ export default {
         }
       });
     },
-    validate(cb) {
+    validate (cb) {
       this.$refs.eleForm.validate(valid => {
-        valid || this.$message.error("请按要求完成表单！");
+        valid || this.$message.error('请按要求完成表单！');
         valid && cb && cb();
       })
     },
-    login() {
+    login () {
       this.validate(() => {
-        let url = "/api/login";
-        let {userName, password} = this.eleForm;
-        let data = {userName, password};
+        const url = '/api/login';
+        const { userName, password } = this.eleForm;
+        const data = { userName, password };
         this.axios.get(url, data).then(res => {
           this.$store.commit({
             type: 'user',
@@ -122,7 +122,7 @@ export default {
       })
     }
   },
-  mounted() {},
+  mounted () {}
 }
 
 </script>

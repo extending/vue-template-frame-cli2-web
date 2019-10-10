@@ -6,14 +6,14 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   strict: process.env.NODE_ENV !== 'production',
   state: {
-		user: null,
-		mobile: '',
+    user: null,
+    mobile: '',
     authed: '',
     count1: 10,
-    count2: 20,
+    count2: 20
   },
   getters: {
-    totalCount(state) {
+    totalCount (state) {
       return state.count1 + state.count2
     },
     // store 的计算属性返回一个函数，即可接受参数
@@ -22,7 +22,7 @@ export default new Vuex.Store({
     }
   },
   mutations: {
-    user(state, payload) {
+    user (state, payload) {
       state.user = payload.user;
       payload.newStateAttr && Vue.set(state, 'newStateAttr', payload.newStateAttr);
     }

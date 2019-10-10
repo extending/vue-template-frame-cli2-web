@@ -13,17 +13,17 @@ export default {
   props: {
     messageA: {
       type: String,
-      default: ""
+      default: ''
     }
   },
-  components: {CB},
+  components: { CB },
   data () {
     return {
     };
   },
   computed: {},
   methods: {},
-  mounted() {},
+  mounted () {}
 }
 
 </script>

@@ -13,35 +13,35 @@ export default {
   components: {
     JsonExcel
   },
-  data() {
+  data () {
     return {
       json_fields: {
-          'Complete name': 'name',
-          'City': 'city',
-          'Telephone': 'phone.mobile',
+        'Complete name': 'name',
+        City: 'city',
+        Telephone: 'phone.mobile'
       },
       json_data: [
-            {
-                'name': 'Tony Peña',
-                'city': 'New York',
-                'country': 'United States',
-                'birthdate': '1978-03-15',
-            },
-            {
-                'name': 'Thessaloniki',
-                'city': 'Athens',
-                'country': 'Greece',
-                'birthdate': '1987-11-23',
-            }
+        {
+          name: 'Tony Peña',
+          city: 'New York',
+          country: 'United States',
+          birthdate: '1978-03-15'
+        },
+        {
+          name: 'Thessaloniki',
+          city: 'Athens',
+          country: 'Greece',
+          birthdate: '1987-11-23'
+        }
       ],
       json_meta: [
-            [
-                {
-                    'key': 'charset',
-                    'value': 'utf-8'
-                }
-            ]
-        ],
+        [
+          {
+            key: 'charset',
+            value: 'utf-8'
+          }
+        ]
+      ]
     }
   }
 }

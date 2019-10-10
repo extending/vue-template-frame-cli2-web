@@ -3,20 +3,20 @@ import page1 from './page1.route'
 import page2 from './page2.route'
 import logout from './logout.route'
 import notFound from './not-found.route'
-//TODO: 实现 首页 登录 注册 退出 修改密码 404
+// TODO: 实现 首页 登录 注册 退出 修改密码 404
 
 export default {
-    path: '/',
-    name: '',
-    component: () => import('./root'),
-    meta: {
-        title: 'root'
-    },
-    children: [
-      auth,
-      page1,
-      page2,
-      logout,
-      notFound,
-    ]
+  path: '/',
+  name: '',
+  component: () => import('./root'),
+  meta: {
+    title: 'root'
+  },
+  children: [
+    auth,
+    page1,
+    page2,
+    logout,
+    notFound
+  ]
 }

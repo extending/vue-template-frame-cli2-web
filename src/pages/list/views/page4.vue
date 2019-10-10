@@ -5,7 +5,7 @@ h2 page4
 <script>
 export default {
   name: 'page4',
-  data() {
+  data () {
     return {
 
     }

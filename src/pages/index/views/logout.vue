@@ -9,24 +9,24 @@
 
 <script>
 
-  export default {
-    name: 'logout',
-    data () {
-      return {}
-    },
-    methods: {
-      logout() {
-        this.$message.success('退出成功');
-        this.$store.commit({
-          type: 'user',
-          user: false
-        });
-      }
-    },
-    mounted () {
-      this.logout();
-    },
+export default {
+  name: 'logout',
+  data () {
+    return {}
+  },
+  methods: {
+    logout () {
+      this.$message.success('退出成功');
+      this.$store.commit({
+        type: 'user',
+        user: false
+      });
+    }
+  },
+  mounted () {
+    this.logout();
   }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

@@ -28,7 +28,7 @@ export default {
               children: [
                 {
                   url: '/demo-1/demo-1-1-1',
-                  title: '子子示例一',
+                  title: '子子示例一'
                 }
               ]
             },
@@ -49,19 +49,19 @@ export default {
         {
           url: '/demo-4',
           title: '示例四'
-        },
+        }
       ],
       isCollapse: true
     };
   },
   components: {},
   computed: {
-    defaultActiveRouter() {
+    defaultActiveRouter () {
       return this.$route.path;
     }
   },
   methods: {},
-  mounted() {},
+  mounted () {}
 }
 
 </script>

@@ -11,7 +11,7 @@ export default {
   data () {
     return {
       loadFail: false,
-      errorMsg: '',
+      errorMsg: ''
     };
   },
 
@@ -20,9 +20,9 @@ export default {
   computed: {},
 
   methods: {
-    check() {
-      let urlSessionFail = "/api/getSessionFail";
-      let urlSessionSuccess = "/api/getSessionSuccess";
+    check () {
+      const urlSessionFail = '/api/getSessionFail';
+      // let urlSessionSuccess = "/api/getSessionSuccess";
       this.axios.get(urlSessionFail).then(res => {
         this.$store.commit({
           type: 'user',
@@ -31,17 +31,17 @@ export default {
       }).catch(error => {
         this.errorMsg = error.message;
         this.loadFail = true;
-        //no op
+        // no op
       })
     },
-    tryAgain() {
+    tryAgain () {
       this.check();
     }
   },
 
-  mounted() {
+  mounted () {
     this.check();
-  },
+  }
 
 }
 

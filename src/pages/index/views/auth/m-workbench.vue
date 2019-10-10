@@ -17,10 +17,10 @@ export default {
     return {
     };
   },
-  components: {CHeader, CSidebar, CFooter},
+  components: { CHeader, CSidebar, CFooter },
   computed: {},
   methods: {},
-  mounted() {},
+  mounted () {}
 }
 
 </script>

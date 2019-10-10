@@ -9,11 +9,11 @@
 export default {
   name: 'demo-1-1',
   components: {},
-  data() {
-      return {
-      }
+  data () {
+    return {
+    }
   },
-  mounted() {},
+  mounted () {}
 }
 
 </script>

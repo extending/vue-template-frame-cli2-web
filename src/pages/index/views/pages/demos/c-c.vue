@@ -17,20 +17,20 @@ export default {
   components: {},
   computed: {},
   methods: {
-    changeMessage() {
-      this.testNextTickMessage = "message";
-      console.log(this.$el.textContent === "message"); // false
+    changeMessage () {
+      this.testNextTickMessage = 'message';
+      console.log(this.$el.textContent === 'message'); // false
       this.$nextTick(() => {
-        console.log(this.$el.textContent === "message"); // true
+        console.log(this.$el.textContent === 'message'); // true
       })
     }
   },
-  mounted() {
+  mounted () {
     this.$EventBus.$on('globalEvent', (val) => {
       console.log('val ', val)
       this.getEventBus = val;
     });
-  },
+  }
 }
 
 </script>
