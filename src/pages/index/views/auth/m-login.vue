@@ -122,8 +122,7 @@ export default {
       })
     }
   },
-  mounted() {
-    let s=8;
+  mounted () {
   }
 }
 
