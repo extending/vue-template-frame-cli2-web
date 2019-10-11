@@ -122,7 +122,9 @@ export default {
       })
     }
   },
-  mounted () {}
+  mounted() {
+    let s=8;
+  }
 }
 
 </script>
