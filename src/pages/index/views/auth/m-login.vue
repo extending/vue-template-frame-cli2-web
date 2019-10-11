@@ -90,7 +90,7 @@ export default {
     }
   },
   methods: {
-    handleSubmit  (e) {
+    handleSubmit (e) {
       e.preventDefault();
       this.form.validateFields((err, values) => {
         // console.log(err)

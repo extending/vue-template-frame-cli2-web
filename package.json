@@ -10,7 +10,7 @@
     "start": "concurrently \"npm run mock\" \"npm run dev\"",
     "start2": "npm run mock & npm run dev",
     "lint": "eslint --ext .js,.vue src/pages",
-    "lint:fix": "eslint --ext .js,.vue --fix src/pages && git add -A",
+    "lint:fix": "echo lint begin--- && eslint --ext .js,.vue --fix src/pages && git add -A",
     "build": "npm run lint:fix && node build/build.js",
     "pre-commit": "echo pre-commit begin---"
   },
