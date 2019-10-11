@@ -99,13 +99,13 @@ export default {
         }
       });
     },
-    validate(cb) {
+    validate (cb) {
       this.$refs.eleForm.validate(valid => {
         valid || this.$message.error('请按要求完成表单！');
         valid && cb && cb();
       })
     },
-    login() {
+    login () {
       this.validate(() => {
         const url = '/api/login';
         const { userName, password } = this.eleForm;
@@ -122,7 +122,7 @@ export default {
       })
     }
   },
-  mounted() {
+  mounted () {
   }
 }
 
