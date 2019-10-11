@@ -28,7 +28,14 @@ Vue.use(VueAxios, axios)
 Vue.config.productionTip = false
 
 if (process.env.NODE_ENV !== 'production') {
-  import('@/mock')
+  // 'import' and 'export' may only appear at the top level
+  // 防止上述报错的解决办法
+  // 1 此处不使用 import()
+  // 2 module: false 注释掉无报错
+  // 3 不注释且添加 es2015 亦可
+  // 4 不注释且将 import 语句移至 if 外部
+  // import('@/mock')
+  require('@/mock')
 }
 
 /* eslint-disable no-new */
