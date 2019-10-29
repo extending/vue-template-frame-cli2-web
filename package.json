@@ -19,8 +19,10 @@
     "lint:fix"
   ],
   "dependencies": {
+    "30-seconds-of-code": "^1.2.3",
     "ant-design-vue": "^1.3.10",
     "axios": "^0.18.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "echarts": "^4.3.0",
     "echarts-wordcloud": "^1.1.3",
     "element-ui": "^2.8.2",
