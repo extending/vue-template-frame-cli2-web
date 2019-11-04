@@ -2,7 +2,7 @@
 div
   //- h3 组件 c-c：这是兄弟组件 c-b 传来的数据：{{getEventBus}}
   h3 {{testNextTickMessage}}
-  el-button(@click="changeMessage")
+  el-button(@click="changeMessage") c-c-button
 </template>
 
 <script>

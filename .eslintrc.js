@@ -35,7 +35,7 @@ module.exports = {
     "rules": {
         // 关闭语句强制分号结尾
         "semi": [0],
-        "no-unused-vars": [2, {
+        "no-unused-vars": [1, {
           // 允许声明未使用变量
           "vars": "local",
           // 参数不检查

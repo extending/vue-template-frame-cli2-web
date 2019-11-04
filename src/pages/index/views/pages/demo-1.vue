@@ -88,7 +88,6 @@ export default {
 </script>
 <style lang='scss' scoped>
 .demo {
-  height: 2000px;
   font-size: 18px;
   padding: 0 30px;
   h1 {
