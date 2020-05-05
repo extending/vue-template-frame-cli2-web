@@ -127,3 +127,20 @@ function uniqeByKeys (array, key) {
 
 
 uniqeByKeys(arr3, 'name')
+
+
+let arr0110 = [
+  {
+    name: 'xm',
+    age: 30
+  }
+]
+
+let arr0111 = [1,2,3]
+
+let arr0112 = [...arr0110]
+let arr0113 = [...arr0111]
+arr0112[0].age = 40
+arr0113[0] = 10
+console.log(arr0112, arr0110)
+console.log(arr0113, arr0111)
